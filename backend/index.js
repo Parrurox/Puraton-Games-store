@@ -67,6 +67,53 @@ app.get("/games/:id", async (req, res) => {
 
 //---------------------------------
 
+//Route for updating a game by id---------------------------
+
+app.put("/games/:id", async (req, res) => {
+  try {
+    if (!req.body.title || !req.body.developer || !req.body.publicationYear) {
+      return res.status(400).send({
+        message: "All fields are required: title, developer, publicationYear",
+      });
+    }
+
+    const { id } = req.params;
+
+    const result = await Game.findByIdAndUpdate(id, req.body);
+
+    if (!result) {
+      return res.status(404).json({ message: "Game not found" });
+    }
+
+    return res.status(200).send({ message: "Game updated successfully" });
+  } catch (error) {
+    console.log("error", error.message); //!
+    res.status(500).send({ message: error.message });
+  }
+});
+
+//---------------------------------
+
+// Route for deleting a game by id---------------------------
+
+app.delete("/games/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const result = await Game.findByIdAndDelete(id);
+
+    if (!result) {
+      return res.status(404).json({ message: "Game not found" });
+    }
+
+    return res.status(200).send({ message: "Game deleted successfully" });
+  } catch (error) {
+    console.log("error", error.message); //!
+    res.status(500).send({ message: error.message });
+  }
+});
+
+//---------------------------------
+
 //connect to mongodb
 Mongoose.connect(mongoDBURL)
   .then(() => {
