@@ -1,20 +1,13 @@
-# Puraton Games Web App
+# Pureton_Games_DB Web App (practice)
 
-This is a web application for a physical copy store specializing in old games. The web app allows users to browse and purchase physical copies of old games.
+This is a web application and sort of a Database/list for physical copies of old games. The web app allows developers to put up, browse all the games available in the company's DataBase 🏬
 
-## Features
-
-- Browse games by category
-- Search for specific games
-- View detailed information about each game
-- Add games to the shopping cart
-- Proceed to checkout and make a purchase
-- User authentication and registration
+# This is a practice project i tried to make to learn frontend, backend & DB integration
 
 ## Technologies Used
 
-- Front-end: HTML, CSS, JavaScript, React
-- Back-end: Node.js, Express.js
+- Front-end: HTML, CSS, JavaScript, React, React-Icons
+- Back-end: Node.js, Express.js,mongoose
 - Database: MongoDB
 
 ## Contributing
