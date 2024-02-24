@@ -10,6 +10,12 @@ This is a web application and sort of a Database/list for physical copies of old
 - Back-end: Node.js, Express.js,mongoose
 - Database: MongoDB
 
+---
+
+![alt text](<webapp gif.gif>)
+
+---
+
 ## Contributing
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
